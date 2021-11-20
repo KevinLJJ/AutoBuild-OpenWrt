@@ -93,6 +93,7 @@ jobs:
     - name: Build firmware
       working-directory: ./openwrt
       run: |
+        make clean
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
     - name : Upload artifact
